@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Okno Główne" Height="450" Width="525">
+    <Grid>
+        <Label x:Name="fileNameLbl" Content="Wybierz plik:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="auto"/>
+        <Button x:Name="BrowseBtn" Content="Przeglądaj" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="100" Click="BrowseBtn_Click"/>
+        <Button x:Name="ProcessBtn" Content="Pokaż statystyki" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="100" Click="ProcessBtn_Click"/>
+        <Label x:Name="FilePlaceLbl" Content="" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="364"/>
+        <Border Name="resultsBorder" BorderBrush="Black" BorderThickness="1" Height="228" VerticalAlignment="Bottom" Margin="123,0,50,95">
+            <Grid Name="resultsGrid" HorizontalAlignment="Left" Height="223" VerticalAlignment="Top" Width="338" ShowGridLines="True" Margin="0,0,-1,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Liczba wierszy"             Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label Content="Liczba znaków"              Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label Content="Liczba białych znaków"      Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label Content="Najdłuższy znak"            Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label Name="rowsCountLbl"       Content="" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Name="charsCountLbl"      Content="" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Name="whiteCharsCountLbl" Content="" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Name="longestWordLbl"     Content="" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+        <TextBox x:Name="errorLogTbx" IsEnabled="False" BorderBrush="white" HorizontalAlignment="Left" Height="50" Margin="123,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="344"/>
+    </Grid>
+</Window>

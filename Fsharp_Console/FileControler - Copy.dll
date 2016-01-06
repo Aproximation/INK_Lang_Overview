@@ -1,0 +1,6 @@
+﻿module FileControler
+
+    type FileControler(path:string)=
+        member this.Path = path
+        member this.Print() = 
+        printf "%A" this.Path
