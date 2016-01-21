@@ -48,7 +48,7 @@ void FileControler::FindLongestWord(string line)
 	{
 		if (word.length() > longestWord.length())
 		{
-			longestWord = word;
+			longestWord = word;		
 		}
 	}
 }
