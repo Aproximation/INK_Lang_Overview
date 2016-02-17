@@ -67,7 +67,7 @@ namespace WpfApplication1
             rowsCountLbl.Content = _fCtrl.rowsNumber;
             charsCountLbl.Content = _fCtrl.charsNumber;
             whiteCharsCountLbl.Content = _fCtrl.whiteCharsNumber;
-            longestWordLbl.Content = _fCtrl.longestWord;
+            longestWordLbl.Text = _fCtrl.longestWord;
 
             resultsBorder.Visibility = Visibility.Visible;
             resultsGrid.Visibility = Visibility.Visible;

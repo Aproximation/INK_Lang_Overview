@@ -30,7 +30,7 @@
                 <Label Name="rowsCountLbl"       Content="" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label Name="charsCountLbl"      Content="" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label Name="whiteCharsCountLbl" Content="" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Label Name="longestWordLbl"     Content="" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Name="longestWordLbl"     Text="" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
             </Grid>
         </Border>
         <TextBox x:Name="errorLogTbx" IsEnabled="False" BorderBrush="white" HorizontalAlignment="Left" Height="50" Margin="123,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="344"/>

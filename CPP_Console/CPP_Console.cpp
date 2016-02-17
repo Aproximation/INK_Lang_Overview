@@ -1,4 +1,4 @@
-// CPP_Console.cpp : Defines the entry point for the console application.
+﻿// CPP_Console.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -22,7 +22,7 @@ bool FileExists(LPCTSTR szPath)
 int main()
 {
 	string path;
-	cout << "Podaj \230cie\276k\251 do pliku:";
+	cout << "Podaj sciezke do pliku:";
 	getline(cin, path);
 	wstring wsTmp(path.begin(), path.end());
 	const wchar_t* filePath = wsTmp.c_str();
@@ -31,7 +31,7 @@ int main()
 		//cout << "\230cie\276ka do pliku prawid\210owa";
 		FileControler fc(filePath);
 		printf("Liczba wierszy: %d\n", fc.rowsNumber);
-		printf("Liczba znak�w: %d\n", fc.charsNumber);
+		printf("Liczba znaków: %d\n", fc.charsNumber);
 		printf("W tym bia\210ych znak\242w: %d\n", fc.whiteCharsNumber);
 		cout << "Najd\210u\276sze s\210owo:" << fc.longestWord << endl;
 	}

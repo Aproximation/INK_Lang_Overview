@@ -12,11 +12,13 @@ class MyApp(object):
         self.root.title("Main frame")
         self.frame = Tk.Frame(parent)
         self.frame.pack()
- 
         btn = Tk.Button(self.frame, text="Open Frame", command=self.openFrame)
         btn.pack()
         btn2 = Tk.Button(self.frame, text='Browse', command=self.askopenfile)
         btn2.pack()
+        text = Tk.Text(self.root)
+        text.insert(Tk.INSERT, "Hello world")
+        text.pack()
         
  
     #----------------------------------------------------------------------
