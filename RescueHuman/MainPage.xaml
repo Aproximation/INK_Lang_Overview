@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="RescueHuman.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RescueHuman"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ControlTemplate x:Key="EnemyTemplate">
+            <Grid Margin="0">
+                <Ellipse Stroke="Black" Margin="0" Width="50" Height="50">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF0707" Offset="0"/>                            
+                            <GradientStop Color="#FF380000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+        </ControlTemplate>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="321*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,10" Grid.RowSpan="2" TextWrapping="Wrap" Text="Rescue human" Width="725" FontSize="40" VerticalAlignment="Bottom"/>
+        <Button x:Name="StartBtn" Content="Start!" HorizontalAlignment="Stretch" Margin="6,31,10,65" Grid.Row="3" VerticalAlignment="Stretch" Click="StartBtn_Click"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="2" HorizontalAlignment="Right" Margin="10,29,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Unikaj uch" VerticalAlignment="Top" Width="83" Height="41"/>
+        <ContentControl Grid.Column="2" HorizontalAlignment="Center" Margin="34,70,15,0" Grid.Row="3" VerticalAlignment="Top" Template="{StaticResource EnemyTemplate}" Background="Black" Height="57" Width="54">
+            <RelativePanel Height="100" Width="100"/>
+        </ContentControl>
+        <ProgressBar Grid.Column="1" Height="25" Margin="10,45,10,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Canvas x:Name="playArea" Margin="0" Grid.Row="2" Grid.ColumnSpan="3">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <StackPanel x:Name="Human" Canvas.Left="505" Orientation="Vertical" Canvas.Top="318" Width="32" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
+                </StackPanel.RenderTransform>
+                <Ellipse Height="32" Stroke="Black" Fill="#FFF0F0F0"/>
+                <Rectangle Height="65" Stroke="Black" Fill="Gainsboro"/>
+            </StackPanel>
+            <Rectangle Height="100" Canvas.Left="962.99" Stroke="Black" Canvas.Top="44.335" Width="100" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform Rotation="53.147"/>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF070708" Offset="0.357"/>
+                        <GradientStop Color="#FF002997" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock x:Name="GameOver" TextWrapping="Wrap" Text="Koniec Gry" FontSize="126" FontFamily="Snap ITC" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="242" Canvas.Top="126" />
+        </Canvas>
+
+    </Grid>
+</Page>
